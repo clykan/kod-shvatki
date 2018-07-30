@@ -1,0 +1,255 @@
+// // Complete the paladin rectangle to protect the village.
+
+// // This function finds the left-most unit.
+// function findMostLeft (units) {
+//     if (units.length === 0) {
+//         return null;
+//     }
+//     var mostLeft = units[0];
+//     for (var i = 0; i < units.length; i++) {
+//         var unit = units[i];
+//         if (unit.pos.x < mostLeft.pos.x) {
+//             mostLeft = unit;
+//         }
+//     }
+//     return mostLeft;
+// }
+
+// // This function finds the bottom-most unit:
+// function findMostBottom (units) {
+//     if (units.length === 0) {
+//         return null;
+//     }
+//     var mostBottom = units[0];
+//     for (var i = 0; i < units.length; i++) {
+//         var unit = units[i];
+//         if (unit.pos.y < mostBottom.pos.y) {
+//             mostBottom = unit;
+//         }
+//     }
+//     return mostBottom;
+// }
+
+// var paladins = hero.findByType("paladin");
+// // Find the top left paladin with findMostLeft function:
+// var topLeftPaladin = findMostLeft(paladins);
+// // Find the bottom right paladin with findMostBottom function:
+// var bottomRightPaladin = findMostBottom(paladins);
+
+// // Use X coordinate from the top left paladin:
+// // and Y coordinate from the bottom right paladin:
+// // Move to the {X, Y} point from the previous step:
+// hero.moveXY(topLeftPaladin.pos.x, bottomRightPaladin.pos.y );
+// // Continue to shield while the volcano is erupting:
+
+
+// while(true){
+//     var gems = hero.findItems();
+//     var total = 0; 
+//     for (var i = 0; i < gems.length; ++i){
+//         var gem = gems[i];
+//         print('x: ' + Math.round(gem.pos.x) + " y: "  + Math.round(gem.pos.y) + ' value:' + gem.value);
+//     }
+//     print('==============================================');
+//     hero.shield();
+// }
+///////////////////////////////////////////////////////////////
+
+// // Complete the paladin rectangle to protect the village.
+
+// // This function finds the left-most unit.
+// function findMostLeft (units) {
+//     if (units.length === 0) {
+//         return null;
+//     }
+//     var mostLeft = units[0];
+//     for (var i = 0; i < units.length; i++) {
+//         var unit = units[i];
+//         if (unit.pos.x < mostLeft.pos.x) {
+//             mostLeft = unit;
+//         }
+//     }
+//     return mostLeft;
+// }
+
+// // This function finds the bottom-most unit:
+// function findMostBottom (units) {
+//     if (units.length === 0) {
+//         return null;
+//     }
+//     var mostBottom = units[0];
+//     for (var i = 0; i < units.length; i++) {
+//         var unit = units[i];
+//         if (unit.pos.y < mostBottom.pos.y) {
+//             mostBottom = unit;
+//         }
+//     }
+//     return mostBottom;
+// }
+
+// var paladins = hero.findByType("paladin");
+// // Find the top left paladin with findMostLeft function:
+// var topLeftPaladin = findMostLeft(paladins);
+
+// // Find the bottom right paladin with findMostBottom function:
+// var bottomRightPaladin = findMostBottom(paladins);
+
+// var x1 = bottomRightPaladin.pos.x;
+// var x1 = topLeftPaladin.pos.y;
+
+// var x2 = bottomRightPaladin.pos.x;
+// var y2 = bottomRightPaladin.pos.y;
+
+
+
+// // Use X coordinate from the top left paladin:
+// // and Y coordinate from the bottom right paladin:
+// // Move to the {X, Y} point from the previous step:
+// hero.moveXY(19, 40);
+
+
+function friendByName(name){
+    var peasants = hero.findByType("peasant");
+    var person = peasants[0];
+    for (var i = 0; i < peasants.length; ++i){
+        var peasant = peasants[i];
+        if (peasant.id == name) person = peasant;
+    }
+    return person;
+}
+var yorik = friendByName('Yorik');
+var xYorik = yorik.pos.x;
+var yYorik = yorik.pos.y;
+pet.say(xYorik + '  ' + yYorik);
+
+// while(hero.distanceTo(Vector(23, 39))>1) hero.move(Vector(23, 39);
+// while (yorik.distanceTo(Vector(57, 47))>0)
+hero.command(yorik, 'move', Vector(57, 47));
+
+// while(true){
+// // else if (yorik.distanceTo(Vector(57, 60))>1)
+//     hero.command(yorik, 'move', Vector(57,60));
+//   break;
+// }
+    // while (yorik.distanceTo(Vector(57, 47)) > 0) hero.command(yorik, 'move', Vector(57, 47));
+
+// // while (yorik.distanceTo(Vector(xYorik, yYorik)) > 1) hero.command(yorik, 'move', Vector(xYorik, yYorik));
+
+
+// hero.moveXY(topLeftPaladin.pos.x, bottomRightPaladin.pos.y );
+
+// // Continue to shield while the volcano is erupting:
+
+
+// // while(true){
+// //     // var gems = hero.findItems();
+// //     // var total = 0; 
+// //     // for (var i = 0; i < gems.length; ++i){
+// //     //     var gem = gems[i];
+// //     //     print('x: ' + Math.round(gem.pos.x) + " y: "  + Math.round(gem.pos.y) + ' value:' + gem.value);
+// //     // }
+// //     // print('==============================================');
+// //     hero.shield();
+// // }
+
+/////////////////////////////////////////////////////////////////////////////////////////////]
+
+// Complete the paladin rectangle to protect the village.
+
+// This function finds the left-most unit.
+function findMostLeft (units) {
+    if (units.length === 0) {
+        return null;
+    }
+    var mostLeft = units[0];
+    for (var i = 0; i < units.length; i++) {
+        var unit = units[i];
+        if (unit.pos.x < mostLeft.pos.x) {
+            mostLeft = unit;
+        }
+    }
+    return mostLeft;
+}
+
+// This function finds the bottom-most unit:
+function findMostBottom (units) {
+    if (units.length === 0) {
+        return null;
+    }
+    var mostBottom = units[0];
+    for (var i = 0; i < units.length; i++) {
+        var unit = units[i];
+        if (unit.pos.y < mostBottom.pos.y) {
+            mostBottom = unit;
+        }
+    }
+    return mostBottom;
+}
+
+var paladins = hero.findByType("paladin");
+// Find the top left paladin with findMostLeft function:
+var mostLeftPaladin = findMostLeft(paladins);
+// Find the bottom right paladin with findMostBottom function:
+var mostBottomPaladin = findMostBottom(paladins);
+
+// Use X coordinate from the top left paladin:
+var x = mostLeftPaladin.pos.x;
+// and Y coordinate from the bottom right paladin:
+var y = mostBottomPaladin.pos.y;
+// Move to the {X, Y} point from the previous step:
+
+// Continue to shield while the volcano is erupting:
+function friendByName(name){
+    var peasants = hero.findByType("peasant");
+    var person = peasants[0];
+    for (var i = 0; i < peasants.length; ++i){
+        var peasant = peasants[i];
+        if (peasant.id == name) person = peasant;
+    }
+    return person;
+}
+//////////////////////////////////////////////
+function moveUnitToPos(unit, points, i, circularMotion ){
+    if (points[i])
+        var distance = unit.distanceTo(points[i]);
+        if (distance > 0.1 ){
+            hero.command(unit, 'move', points[i]);
+            return i;
+        }    
+        else if (i == points.lenght - 1 && circularMotion)
+            return 0;
+        else
+            return i + 1;
+}            
+///////////////////////////////////////////            
+var yorik = friendByName('Yorik');
+var yorikMove = [Vector(57, 47), Vector(57, 57)];
+
+var yorik = friendByName('Yorik');
+var yorikMove = [Vector(57, 47), Vector(57, 67)];
+
+var giselle = friendByName('Giselle');
+var giselleMove = [Vector(55, 20), Vector(55, 5)];
+
+// var millicent = friendByName('Millicent');
+// var millicentMove = [Vector(23, 39), Vector(1, 30)];
+
+var tabitha1 = friendByName('Tabitha 1');
+// var tabitha1Move = [Vector(3, 45)];
+
+var iY = 0;
+var iG = 0 ;
+var iM = 0;
+var iT1 = 0;
+while(true) {
+    if (hero.distanceTo(Vector(x, y))>0)
+        hero.move(Vector(x, y));
+    else hero.shield();
+    iY = moveUnitToPos (yorik,yorikMove, iY, false);
+    iG = moveUnitToPos (giselle,giselleMove, iG, false);
+    // iM = moveUnitToPos (millicent,millicentMove, iG, false);
+    // iT1 = moveUnitToPos (tabitha1,tabitha1Move, iG, false);
+    var gem = tabitha1.findNearestItem();
+    if (gem)
+        hero.command(tabitha1, 'move', gem.pos);
+}
