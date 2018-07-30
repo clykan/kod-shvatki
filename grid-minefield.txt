@@ -1,0 +1,17 @@
+var points = [[12, 16], [12, 24], [12, 32], [12, 40], [12, 48], [12, 56],
+              [23, 56], [23, 48], [23, 40], [23, 32], [23, 24], [23, 16],
+              [34, 16], [34, 24], [34, 32], [34, 40], [34, 48], [34, 56],
+              [45, 56], [45, 48], [45, 40], [45, 32], [45, 24], [45, 16],
+              [56, 16], [56, 24], [56, 32], [56, 40], [56, 48], [56, 56]
+             ];
+while (hero.distanceTo(Vector(12,16))>4){
+    if (hero.isReady('jump')) hero.jumpTo(Vector(12,16));
+    hero.move(Vector(12,16));
+} 
+
+for (var i in points){
+    hero.buildXY('fire-trap', points[i][0], points[i][1]);
+    hero.buildXY('fire-trap', points[i][0], points[i][1]);
+    if (i%3 === 0) hero.buildXY('fire-trap', points[i][0], points[i][1]);
+}
+ hero.moveXY(67, 56);
